@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4661046123589B9D00C35319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661046023589B9D00C35319 /* AppDelegate.swift */; };
+		4661046323589B9D00C35319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661046223589B9D00C35319 /* ViewController.swift */; };
+		4661046523589B9E00C35319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4661046423589B9E00C35319 /* Assets.xcassets */; };
+		4661046823589B9E00C35319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4661046623589B9E00C35319 /* Main.storyboard */; };
+		466104772358A0E400C35319 /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 466104732358A0E400C35319 /* LeapObjectiveC.mm */; };
+		466104792358A14D00C35319 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 466104782358A14D00C35319 /* libLeap.dylib */; };
+		4661047D2358A22600C35319 /* LeapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661047C2358A22600C35319 /* LeapService.swift */; };
+		466104802358A34A00C35319 /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 466104782358A14D00C35319 /* libLeap.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4661047F2358A33B00C35319 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				466104802358A34A00C35319 /* libLeap.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4661045D23589B9D00C35319 /* LeapMotionServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeapMotionServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4661046023589B9D00C35319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4661046223589B9D00C35319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4661046423589B9E00C35319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4661046723589B9E00C35319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4661046923589B9E00C35319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4661046A23589B9E00C35319 /* LeapMotionServer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeapMotionServer.entitlements; sourceTree = "<group>"; };
+		466104712358A0E400C35319 /* Leap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leap.h; sourceTree = "<group>"; };
+		466104722358A0E400C35319 /* Leap.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = Leap.i; sourceTree = "<group>"; };
+		466104732358A0E400C35319 /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LeapObjectiveC.mm; sourceTree = "<group>"; };
+		466104742358A0E400C35319 /* LeapMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapMath.h; sourceTree = "<group>"; };
+		466104752358A0E400C35319 /* LeapObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapObjectiveC.h; sourceTree = "<group>"; };
+		466104782358A14D00C35319 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
+		4661047C2358A22600C35319 /* LeapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapService.swift; sourceTree = "<group>"; };
+		4661047E2358A29700C35319 /* LeapMotionServer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeapMotionServer-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4661045A23589B9D00C35319 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466104792358A14D00C35319 /* libLeap.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4661045423589B9D00C35319 = {
+			isa = PBXGroup;
+			children = (
+				4661045F23589B9D00C35319 /* LeapMotionServer */,
+				4661045E23589B9D00C35319 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4661045E23589B9D00C35319 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4661045D23589B9D00C35319 /* LeapMotionServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4661045F23589B9D00C35319 /* LeapMotionServer */ = {
+			isa = PBXGroup;
+			children = (
+				4661046023589B9D00C35319 /* AppDelegate.swift */,
+				4661046223589B9D00C35319 /* ViewController.swift */,
+				4661046423589B9E00C35319 /* Assets.xcassets */,
+				4661046623589B9E00C35319 /* Main.storyboard */,
+				4661046923589B9E00C35319 /* Info.plist */,
+				4661046A23589B9E00C35319 /* LeapMotionServer.entitlements */,
+				466104702358A0E400C35319 /* LeapMotionSDK */,
+			);
+			path = LeapMotionServer;
+			sourceTree = "<group>";
+		};
+		466104702358A0E400C35319 /* LeapMotionSDK */ = {
+			isa = PBXGroup;
+			children = (
+				466104712358A0E400C35319 /* Leap.h */,
+				466104722358A0E400C35319 /* Leap.i */,
+				466104732358A0E400C35319 /* LeapObjectiveC.mm */,
+				466104742358A0E400C35319 /* LeapMath.h */,
+				466104752358A0E400C35319 /* LeapObjectiveC.h */,
+				466104782358A14D00C35319 /* libLeap.dylib */,
+				4661047C2358A22600C35319 /* LeapService.swift */,
+				4661047E2358A29700C35319 /* LeapMotionServer-Bridging-Header.h */,
+			);
+			path = LeapMotionSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4661045C23589B9D00C35319 /* LeapMotionServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4661046D23589B9E00C35319 /* Build configuration list for PBXNativeTarget "LeapMotionServer" */;
+			buildPhases = (
+				4661045923589B9D00C35319 /* Sources */,
+				4661045A23589B9D00C35319 /* Frameworks */,
+				4661045B23589B9D00C35319 /* Resources */,
+				4661047F2358A33B00C35319 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeapMotionServer;
+			productName = LeapMotionServer;
+			productReference = 4661045D23589B9D00C35319 /* LeapMotionServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4661045523589B9D00C35319 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = touyou;
+				TargetAttributes = {
+					4661045C23589B9D00C35319 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 4661045823589B9D00C35319 /* Build configuration list for PBXProject "LeapMotionServer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4661045423589B9D00C35319;
+			productRefGroup = 4661045E23589B9D00C35319 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4661045C23589B9D00C35319 /* LeapMotionServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4661045B23589B9D00C35319 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4661046523589B9E00C35319 /* Assets.xcassets in Resources */,
+				4661046823589B9E00C35319 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4661045923589B9D00C35319 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466104772358A0E400C35319 /* LeapObjectiveC.mm in Sources */,
+				4661047D2358A22600C35319 /* LeapService.swift in Sources */,
+				4661046323589B9D00C35319 /* ViewController.swift in Sources */,
+				4661046123589B9D00C35319 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4661046623589B9E00C35319 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4661046723589B9E00C35319 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4661046B23589B9E00C35319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4661046C23589B9E00C35319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4661046E23589B9E00C35319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LeapMotionServer/LeapMotionServer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = B4S4333JDW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = LeapMotionServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LeapMotionServer/LeapMotionSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.touyou.LeapMotionServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeapMotionServer/LeapMotionSDK/LeapMotionServer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4661046F23589B9E00C35319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LeapMotionServer/LeapMotionServer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = B4S4333JDW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = LeapMotionServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LeapMotionServer/LeapMotionSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.touyou.LeapMotionServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeapMotionServer/LeapMotionSDK/LeapMotionServer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4661045823589B9D00C35319 /* Build configuration list for PBXProject "LeapMotionServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4661046B23589B9E00C35319 /* Debug */,
+				4661046C23589B9E00C35319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4661046D23589B9E00C35319 /* Build configuration list for PBXNativeTarget "LeapMotionServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4661046E23589B9E00C35319 /* Debug */,
+				4661046F23589B9E00C35319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4661045523589B9D00C35319 /* Project object */;
+}
