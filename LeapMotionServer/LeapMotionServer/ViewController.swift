@@ -10,10 +10,13 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    fileprivate let leapService = LeapService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        leapService.delegate = self
+        leapService.run()
     }
 
     override var representedObject: Any? {
@@ -21,7 +24,21 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
 
+// MARK: - LeapServiceDelegate
+
+extension ViewController: LeapServiceDelegate {
+
+    func willUpdateData() {
+
+    }
+
+    func didStopUpdatingData() {
+
+    }
+
+    func didUpdate(_ handRepresentations: [LeapHandRepresentation]) {
+
+    }
+}

@@ -5,6 +5,7 @@
 //  Created by 藤井陽介 on 2019/10/17.
 //  Copyright © 2019 touyou. All rights reserved.
 //
+// ref: https://github.com/arthurschiller/ARKit-LeapMotion/blob/master/Mac%20App/LeapMotion%20Visualization/Services/LeapService.swift
 
 import Foundation
 
@@ -105,6 +106,7 @@ struct LeapHandRepresentation {
     var translation: LeapVector?
     let position: LeapVector
     let eulerAngles: LeapVector
+    let thumbFinger: LeapFingerRepresentation?
     let fingers: [LeapFingerRepresentation]
 }
 
@@ -120,6 +122,7 @@ extension LeapHand {
             translation: nil,
             position: palmPosition,
             eulerAngles: LeapVector(x: direction.pitch, y: -direction.yaw, z: palmNormal.roll),
+            thumbFinger: fingerData.filter { $0.type == LeapFingerType.thumb }.first,
             fingers: fingerData
         )
     }
