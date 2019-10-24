@@ -32,6 +32,7 @@ final class LeapService: NSObject {
     func run() {
         controller = LeapController()
         controller?.addListener(self)
+        print(controller?.devices)
     }
 }
 
@@ -40,7 +41,10 @@ final class LeapService: NSObject {
 extension LeapService: LeapListener {
 
     // MARK: LeapMotion Listener Initialized
-    func onInit(_ notification: Notification!) {}
+    func onInit(_ notification: Notification!) {
+        print("on init \(notification.description)")
+        print(controller?.devices)
+    }
 
     // MARK: LeapMotion Listener Connected
     func onConnect(_ notification: Notification!) {
@@ -56,21 +60,28 @@ extension LeapService: LeapListener {
     // MARK: LeapMotion Listener Disconnected
     func onDisconnect(_ notification: Notification!) {
         isUpdatingData = false
+        print("on disconnect")
     }
 
     // MARK: LeapMotion Service Connected
-    func onServiceConnect(_ notification: Notification!) {}
+    func onServiceConnect(_ notification: Notification!) {
+        print("on service connect")
+    }
 
     // MARK: LeapMotion Service Disconnected
-    func onDeviceChange(_ notification: Notification!) {}
+    func onDeviceChange(_ notification: Notification!) {
+        print("on device change")
+    }
 
     // MARK: LeapMotion Listener Exited
     func onExit(_ notification: Notification!) {
         isUpdatingData = false
+        print("on exit")
     }
 
     // MARK: gets called each time a new frame gets emitted
     func onFrame(_ notification: Notification!) {
+        print("on frame")
         guard
             let controller: LeapController = notification.object as? LeapController,
             let frame = controller.frame(0),

@@ -26,6 +26,13 @@ class ViewController: NSViewController {
         leapService.run()
     }
 
+    fileprivate func setupMultipeerConnectivity() {
+
+        setupPeerId()
+        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .none)
+        mcSession.delegate = self
+    }
+
     fileprivate func setupPeerId() {
 
         let kDisplayNameKey = "kDisplayNameKey"
@@ -51,6 +58,59 @@ class ViewController: NSViewController {
         defaults.set(displayName, forKey: kDisplayNameKey)
         self.peerID = peerID
     }
+
+    fileprivate func startStream() {
+        guard
+            let streamTargetPeer = streamTargetPeer,
+            let stream = try? mcSession.startStream(withName: "LMDDataStream", toPeer: streamTargetPeer)
+        else {
+            return
+        }
+
+        stream.schedule(in: .main, forMode: .default)
+        stream.delegate = self
+        stream.open()
+        outputStream = stream
+    }
+}
+
+// MARK: - MCSessionDelegate
+
+extension ViewController: MCSessionDelegate {
+
+    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+        switch state {
+        case .connected:
+            streamTargetPeer = peerID
+            startStream()
+        case .connecting:
+            break
+        case .notConnected:
+            break
+        @unknown default:
+            fatalError()
+        }
+    }
+
+    // MARK: did receive stream
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {}
+
+    // MARK: did start receiving resource
+    func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {}
+
+    // MARK: did finish receiving resource
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {}
+
+    // MARK: did receive data
+    func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {}
+}
+
+// MARK: - StreamDelegate
+
+extension ViewController: StreamDelegate {
+
+    // MARK: handle stream
+    func stream(_ aStream: Stream, handle eventCode: Stream.Event) {}
 }
 
 // MARK: - LeapServiceDelegate
@@ -58,14 +118,14 @@ class ViewController: NSViewController {
 extension ViewController: LeapServiceDelegate {
 
     func willUpdateData() {
-
+        print("will update data")
     }
 
     func didStopUpdatingData() {
-
+        print("did stop updating data")
     }
 
     func didUpdate(_ handRepresentations: [LeapHandRepresentation]) {
-
+        print(handRepresentations.description)
     }
 }

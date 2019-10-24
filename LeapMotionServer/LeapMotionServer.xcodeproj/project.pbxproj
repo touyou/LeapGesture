@@ -13,9 +13,9 @@
 		4661046523589B9E00C35319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4661046423589B9E00C35319 /* Assets.xcassets */; };
 		4661046823589B9E00C35319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4661046623589B9E00C35319 /* Main.storyboard */; };
 		466104772358A0E400C35319 /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 466104732358A0E400C35319 /* LeapObjectiveC.mm */; };
-		466104792358A14D00C35319 /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 466104782358A14D00C35319 /* libLeap.dylib */; };
 		4661047D2358A22600C35319 /* LeapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661047C2358A22600C35319 /* LeapService.swift */; };
-		466104802358A34A00C35319 /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 466104782358A14D00C35319 /* libLeap.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		46E845922361DEB600394E9A /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E845912361DEB600394E9A /* libLeap.dylib */; };
+		46E845932361DECB00394E9A /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46E845912361DEB600394E9A /* libLeap.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				466104802358A34A00C35319 /* libLeap.dylib in CopyFiles */,
+				46E845932361DECB00394E9A /* libLeap.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,9 +45,9 @@
 		466104732358A0E400C35319 /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LeapObjectiveC.mm; sourceTree = "<group>"; };
 		466104742358A0E400C35319 /* LeapMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapMath.h; sourceTree = "<group>"; };
 		466104752358A0E400C35319 /* LeapObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapObjectiveC.h; sourceTree = "<group>"; };
-		466104782358A14D00C35319 /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
 		4661047C2358A22600C35319 /* LeapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapService.swift; sourceTree = "<group>"; };
 		4661047E2358A29700C35319 /* LeapMotionServer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeapMotionServer-Bridging-Header.h"; sourceTree = "<group>"; };
+		46E845912361DEB600394E9A /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				466104792358A14D00C35319 /* libLeap.dylib in Frameworks */,
+				46E845922361DEB600394E9A /* libLeap.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,10 +98,10 @@
 			children = (
 				466104712358A0E400C35319 /* Leap.h */,
 				466104722358A0E400C35319 /* Leap.i */,
-				466104732358A0E400C35319 /* LeapObjectiveC.mm */,
 				466104742358A0E400C35319 /* LeapMath.h */,
 				466104752358A0E400C35319 /* LeapObjectiveC.h */,
-				466104782358A14D00C35319 /* libLeap.dylib */,
+				466104732358A0E400C35319 /* LeapObjectiveC.mm */,
+				46E845912361DEB600394E9A /* libLeap.dylib */,
 				4661047C2358A22600C35319 /* LeapService.swift */,
 				4661047E2358A29700C35319 /* LeapMotionServer-Bridging-Header.h */,
 			);
