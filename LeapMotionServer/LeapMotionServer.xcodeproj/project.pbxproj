@@ -14,8 +14,8 @@
 		4661046823589B9E00C35319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4661046623589B9E00C35319 /* Main.storyboard */; };
 		466104772358A0E400C35319 /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 466104732358A0E400C35319 /* LeapObjectiveC.mm */; };
 		4661047D2358A22600C35319 /* LeapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4661047C2358A22600C35319 /* LeapService.swift */; };
-		46E845922361DEB600394E9A /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E845912361DEB600394E9A /* libLeap.dylib */; };
-		46E845932361DECB00394E9A /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46E845912361DEB600394E9A /* libLeap.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		46E845972361E09600394E9A /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46E845912361DEB600394E9A /* libLeap.dylib */; };
+		46E845982361E0AA00394E9A /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E845912361DEB600394E9A /* libLeap.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				46E845932361DECB00394E9A /* libLeap.dylib in CopyFiles */,
+				46E845972361E09600394E9A /* libLeap.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E845922361DEB600394E9A /* libLeap.dylib in Frameworks */,
+				46E845982361E0AA00394E9A /* libLeap.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +67,7 @@
 			children = (
 				4661045F23589B9D00C35319 /* LeapMotionServer */,
 				4661045E23589B9D00C35319 /* Products */,
+				46E845952361E02900394E9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,13 +88,15 @@
 				4661046623589B9E00C35319 /* Main.storyboard */,
 				4661046923589B9E00C35319 /* Info.plist */,
 				4661046A23589B9E00C35319 /* LeapMotionServer.entitlements */,
-				466104702358A0E400C35319 /* LeapMotionSDK */,
+				4661047C2358A22600C35319 /* LeapService.swift */,
+				4661047E2358A29700C35319 /* LeapMotionServer-Bridging-Header.h */,
+				466104702358A0E400C35319 /* LeapMotion */,
 				460EEF8A235D9AD100A2E7E8 /* FingerTap.swift */,
 			);
 			path = LeapMotionServer;
 			sourceTree = "<group>";
 		};
-		466104702358A0E400C35319 /* LeapMotionSDK */ = {
+		466104702358A0E400C35319 /* LeapMotion */ = {
 			isa = PBXGroup;
 			children = (
 				466104712358A0E400C35319 /* Leap.h */,
@@ -101,11 +104,24 @@
 				466104742358A0E400C35319 /* LeapMath.h */,
 				466104752358A0E400C35319 /* LeapObjectiveC.h */,
 				466104732358A0E400C35319 /* LeapObjectiveC.mm */,
-				46E845912361DEB600394E9A /* libLeap.dylib */,
-				4661047C2358A22600C35319 /* LeapService.swift */,
-				4661047E2358A29700C35319 /* LeapMotionServer-Bridging-Header.h */,
+				46E845942361DF7F00394E9A /* lib */,
 			);
-			path = LeapMotionSDK;
+			path = LeapMotion;
+			sourceTree = "<group>";
+		};
+		46E845942361DF7F00394E9A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				46E845912361DEB600394E9A /* libLeap.dylib */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		46E845952361E02900394E9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,10 +348,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LeapMotionServer/LeapMotionSDK",
+					"$(PROJECT_DIR)/LeapMotionServer/LeapMotionSDK/lib",
+					"$(PROJECT_DIR)/LeapMotionServer/LeapMotion/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.touyou.LeapMotionServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LeapMotionServer/LeapMotionSDK/LeapMotionServer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeapMotionServer/LeapMotionServer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -358,10 +376,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LeapMotionServer/LeapMotionSDK",
+					"$(PROJECT_DIR)/LeapMotionServer/LeapMotionSDK/lib",
+					"$(PROJECT_DIR)/LeapMotionServer/LeapMotion/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.touyou.LeapMotionServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LeapMotionServer/LeapMotionSDK/LeapMotionServer-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeapMotionServer/LeapMotionServer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

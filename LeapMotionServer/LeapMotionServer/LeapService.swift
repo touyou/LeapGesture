@@ -15,7 +15,7 @@ protocol LeapServiceDelegate {
     func didUpdate(_ handRepresentations: [LeapHandRepresentation])
 }
 
-final class LeapService: NSObject {
+final class LeapService: NSObject, LeapListener {
 
     var delegate: LeapServiceDelegate?
 
@@ -38,7 +38,7 @@ final class LeapService: NSObject {
 
 // MARK: - Leap Listener
 
-extension LeapService: LeapListener {
+extension LeapService {
 
     // MARK: LeapMotion Listener Initialized
     func onInit(_ notification: Notification!) {
@@ -52,8 +52,10 @@ extension LeapService: LeapListener {
             return
         }
 
-        // If you want to enable some gesture, write here
-        // e.g. controller.enable(LEAP_GESTURE_TYPE_CIRCLE, enable: true)
+        controller.enable(LEAP_GESTURE_TYPE_CIRCLE, enable: true)
+        controller.enable(LEAP_GESTURE_TYPE_KEY_TAP, enable: true)
+        controller.enable(LEAP_GESTURE_TYPE_SCREEN_TAP, enable: true)
+        controller.enable(LEAP_GESTURE_TYPE_SWIPE, enable: true)
         print(controller.description)
     }
 
@@ -115,6 +117,7 @@ extension LeapService: LeapListener {
 
 struct LeapHandRepresentation {
     var translation: LeapVector?
+    let handType: HandType
     let position: LeapVector
     let eulerAngles: LeapVector
     let thumbFinger: LeapFingerRepresentation?
@@ -131,6 +134,7 @@ extension LeapHand {
 
         return LeapHandRepresentation(
             translation: nil,
+            handType: isLeft ? .left : .right,
             position: palmPosition,
             eulerAngles: LeapVector(x: direction.pitch, y: -direction.yaw, z: palmNormal.roll),
             thumbFinger: fingerData.filter { $0.type == LeapFingerType.thumb }.first,
