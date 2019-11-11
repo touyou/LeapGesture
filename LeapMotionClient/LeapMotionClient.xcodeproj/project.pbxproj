@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46FE0CD92378F4700086BDD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE0CD82378F4700086BDD0 /* AppDelegate.swift */; };
+		46FE0CDB2378F4700086BDD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE0CDA2378F4700086BDD0 /* SceneDelegate.swift */; };
+		46FE0CDD2378F4700086BDD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE0CDC2378F4700086BDD0 /* ViewController.swift */; };
+		46FE0CE02378F4700086BDD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46FE0CDE2378F4700086BDD0 /* Main.storyboard */; };
+		46FE0CE22378F4730086BDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46FE0CE12378F4730086BDD0 /* Assets.xcassets */; };
+		46FE0CE52378F4730086BDD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46FE0CE32378F4730086BDD0 /* LaunchScreen.storyboard */; };
+		46FE0CEF2378F5C00086BDD0 /* SwiftFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 46FE0CEE2378F5C00086BDD0 /* SwiftFormat */; };
+		46FE0CFA2378F6B90086BDD0 /* LeapMotionClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE0CF92378F6B90086BDD0 /* LeapMotionClientTests.swift */; };
+		73622AC31059681691A1458F /* Pods_LeapMotionClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA073484A085EC442AD69B0 /* Pods_LeapMotionClient.framework */; };
+		DDAD1955E4D75D29A2B75A07 /* Pods_LeapMotionClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41421DA37A4A1F624D3B57D7 /* Pods_LeapMotionClientTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46FE0CFC2378F6B90086BDD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46FE0CCD2378F4700086BDD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46FE0CD42378F4700086BDD0;
+			remoteInfo = LeapMotionClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07AD3A9C82F365F0AD0CC009 /* Pods-LeapMotionClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeapMotionClientTests.debug.xcconfig"; path = "Target Support Files/Pods-LeapMotionClientTests/Pods-LeapMotionClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2AEB6D385FC48F2ADD674E9A /* Pods-LeapMotionClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeapMotionClient.debug.xcconfig"; path = "Target Support Files/Pods-LeapMotionClient/Pods-LeapMotionClient.debug.xcconfig"; sourceTree = "<group>"; };
+		41421DA37A4A1F624D3B57D7 /* Pods_LeapMotionClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeapMotionClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46FE0CD52378F4700086BDD0 /* LeapMotionClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeapMotionClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46FE0CD82378F4700086BDD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46FE0CDA2378F4700086BDD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		46FE0CDC2378F4700086BDD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46FE0CDF2378F4700086BDD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46FE0CE12378F4730086BDD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46FE0CE42378F4730086BDD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46FE0CE62378F4730086BDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46FE0CF72378F6B90086BDD0 /* LeapMotionClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeapMotionClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46FE0CF92378F6B90086BDD0 /* LeapMotionClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeapMotionClientTests.swift; sourceTree = "<group>"; };
+		46FE0CFB2378F6B90086BDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DA073484A085EC442AD69B0 /* Pods_LeapMotionClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeapMotionClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		939DF4F8A7BBA2FC08387F03 /* Pods-LeapMotionClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeapMotionClientTests.release.xcconfig"; path = "Target Support Files/Pods-LeapMotionClientTests/Pods-LeapMotionClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5D4E194F7111E148E033C22 /* Pods-LeapMotionClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeapMotionClient.release.xcconfig"; path = "Target Support Files/Pods-LeapMotionClient/Pods-LeapMotionClient.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46FE0CD22378F4700086BDD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FE0CEF2378F5C00086BDD0 /* SwiftFormat in Frameworks */,
+				73622AC31059681691A1458F /* Pods_LeapMotionClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FE0CF42378F6B90086BDD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAD1955E4D75D29A2B75A07 /* Pods_LeapMotionClientTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46FE0CCC2378F4700086BDD0 = {
+			isa = PBXGroup;
+			children = (
+				46FE0CD72378F4700086BDD0 /* LeapMotionClient */,
+				46FE0CF82378F6B90086BDD0 /* LeapMotionClientTests */,
+				46FE0CD62378F4700086BDD0 /* Products */,
+				FD1AADBAF1FAEC025266C08B /* Pods */,
+				572C189A656458AFC1E73195 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		46FE0CD62378F4700086BDD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46FE0CD52378F4700086BDD0 /* LeapMotionClient.app */,
+				46FE0CF72378F6B90086BDD0 /* LeapMotionClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46FE0CD72378F4700086BDD0 /* LeapMotionClient */ = {
+			isa = PBXGroup;
+			children = (
+				46FE0CD82378F4700086BDD0 /* AppDelegate.swift */,
+				46FE0CDA2378F4700086BDD0 /* SceneDelegate.swift */,
+				46FE0CDC2378F4700086BDD0 /* ViewController.swift */,
+				46FE0CDE2378F4700086BDD0 /* Main.storyboard */,
+				46FE0CE12378F4730086BDD0 /* Assets.xcassets */,
+				46FE0CE32378F4730086BDD0 /* LaunchScreen.storyboard */,
+				46FE0CE62378F4730086BDD0 /* Info.plist */,
+			);
+			path = LeapMotionClient;
+			sourceTree = "<group>";
+		};
+		46FE0CF82378F6B90086BDD0 /* LeapMotionClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				46FE0CF92378F6B90086BDD0 /* LeapMotionClientTests.swift */,
+				46FE0CFB2378F6B90086BDD0 /* Info.plist */,
+			);
+			path = LeapMotionClientTests;
+			sourceTree = "<group>";
+		};
+		572C189A656458AFC1E73195 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DA073484A085EC442AD69B0 /* Pods_LeapMotionClient.framework */,
+				41421DA37A4A1F624D3B57D7 /* Pods_LeapMotionClientTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD1AADBAF1FAEC025266C08B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AEB6D385FC48F2ADD674E9A /* Pods-LeapMotionClient.debug.xcconfig */,
+				B5D4E194F7111E148E033C22 /* Pods-LeapMotionClient.release.xcconfig */,
+				07AD3A9C82F365F0AD0CC009 /* Pods-LeapMotionClientTests.debug.xcconfig */,
+				939DF4F8A7BBA2FC08387F03 /* Pods-LeapMotionClientTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46FE0CD42378F4700086BDD0 /* LeapMotionClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46FE0CE92378F4730086BDD0 /* Build configuration list for PBXNativeTarget "LeapMotionClient" */;
+			buildPhases = (
+				63E8984BE5662E1761CD0E21 /* [CP] Check Pods Manifest.lock */,
+				46FE0CD12378F4700086BDD0 /* Sources */,
+				46FE0CD22378F4700086BDD0 /* Frameworks */,
+				46FE0CD32378F4700086BDD0 /* Resources */,
+				46FE0D022378FD620086BDD0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeapMotionClient;
+			packageProductDependencies = (
+				46FE0CEE2378F5C00086BDD0 /* SwiftFormat */,
+			);
+			productName = LeapMotionClient;
+			productReference = 46FE0CD52378F4700086BDD0 /* LeapMotionClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46FE0CF62378F6B90086BDD0 /* LeapMotionClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46FE0CFE2378F6B90086BDD0 /* Build configuration list for PBXNativeTarget "LeapMotionClientTests" */;
+			buildPhases = (
+				12C680A20613A2147E9833D3 /* [CP] Check Pods Manifest.lock */,
+				46FE0CF32378F6B90086BDD0 /* Sources */,
+				46FE0CF42378F6B90086BDD0 /* Frameworks */,
+				46FE0CF52378F6B90086BDD0 /* Resources */,
+				46FE0D012378F6BF0086BDD0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46FE0CFD2378F6B90086BDD0 /* PBXTargetDependency */,
+			);
+			name = LeapMotionClientTests;
+			productName = LeapMotionClientTests;
+			productReference = 46FE0CF72378F6B90086BDD0 /* LeapMotionClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46FE0CCD2378F4700086BDD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = touyou;
+				TargetAttributes = {
+					46FE0CD42378F4700086BDD0 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					46FE0CF62378F6B90086BDD0 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 46FE0CD42378F4700086BDD0;
+					};
+				};
+			};
+			buildConfigurationList = 46FE0CD02378F4700086BDD0 /* Build configuration list for PBXProject "LeapMotionClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46FE0CCC2378F4700086BDD0;
+			packageReferences = (
+				46FE0CEC2378F52F0086BDD0 /* XCRemoteSwiftPackageReference "R" */,
+				46FE0CED2378F5C00086BDD0 /* XCRemoteSwiftPackageReference "SwiftFormat" */,
+			);
+			productRefGroup = 46FE0CD62378F4700086BDD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46FE0CD42378F4700086BDD0 /* LeapMotionClient */,
+				46FE0CF62378F6B90086BDD0 /* LeapMotionClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46FE0CD32378F4700086BDD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FE0CE52378F4730086BDD0 /* LaunchScreen.storyboard in Resources */,
+				46FE0CE22378F4730086BDD0 /* Assets.xcassets in Resources */,
+				46FE0CE02378F4700086BDD0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FE0CF52378F6B90086BDD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12C680A20613A2147E9833D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeapMotionClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46FE0D012378F6BF0086BDD0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport SPM_ROOT=$(dirname $(dirname $BUILD_ROOT))/SourcePackages/checkouts\n\"${SPM_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Carthage,Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas\n";
+		};
+		46FE0D022378FD620086BDD0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		63E8984BE5662E1761CD0E21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeapMotionClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46FE0CD12378F4700086BDD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FE0CDD2378F4700086BDD0 /* ViewController.swift in Sources */,
+				46FE0CD92378F4700086BDD0 /* AppDelegate.swift in Sources */,
+				46FE0CDB2378F4700086BDD0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46FE0CF32378F6B90086BDD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46FE0CFA2378F6B90086BDD0 /* LeapMotionClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46FE0CFD2378F6B90086BDD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46FE0CD42378F4700086BDD0 /* LeapMotionClient */;
+			targetProxy = 46FE0CFC2378F6B90086BDD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46FE0CDE2378F4700086BDD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46FE0CDF2378F4700086BDD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46FE0CE32378F4730086BDD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46FE0CE42378F4730086BDD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46FE0CE72378F4730086BDD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46FE0CE82378F4730086BDD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46FE0CEA2378F4730086BDD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AEB6D385FC48F2ADD674E9A /* Pods-LeapMotionClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4S4333JDW;
+				INFOPLIST_FILE = LeapMotionClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.touyou.LeapMotionClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46FE0CEB2378F4730086BDD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5D4E194F7111E148E033C22 /* Pods-LeapMotionClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4S4333JDW;
+				INFOPLIST_FILE = LeapMotionClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.touyou.LeapMotionClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		46FE0CFF2378F6B90086BDD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07AD3A9C82F365F0AD0CC009 /* Pods-LeapMotionClientTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4S4333JDW;
+				INFOPLIST_FILE = LeapMotionClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.touyou.LeapMotionClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeapMotionClient.app/LeapMotionClient";
+			};
+			name = Debug;
+		};
+		46FE0D002378F6B90086BDD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939DF4F8A7BBA2FC08387F03 /* Pods-LeapMotionClientTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4S4333JDW;
+				INFOPLIST_FILE = LeapMotionClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.touyou.LeapMotionClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeapMotionClient.app/LeapMotionClient";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46FE0CD02378F4700086BDD0 /* Build configuration list for PBXProject "LeapMotionClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46FE0CE72378F4730086BDD0 /* Debug */,
+				46FE0CE82378F4730086BDD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46FE0CE92378F4730086BDD0 /* Build configuration list for PBXNativeTarget "LeapMotionClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46FE0CEA2378F4730086BDD0 /* Debug */,
+				46FE0CEB2378F4730086BDD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46FE0CFE2378F6B90086BDD0 /* Build configuration list for PBXNativeTarget "LeapMotionClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46FE0CFF2378F6B90086BDD0 /* Debug */,
+				46FE0D002378F6B90086BDD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46FE0CEC2378F52F0086BDD0 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		46FE0CED2378F5C00086BDD0 /* XCRemoteSwiftPackageReference "SwiftFormat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nicklockwood/SwiftFormat";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.40.14;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46FE0CEE2378F5C00086BDD0 /* SwiftFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46FE0CED2378F5C00086BDD0 /* XCRemoteSwiftPackageReference "SwiftFormat" */;
+			productName = SwiftFormat;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 46FE0CCD2378F4700086BDD0 /* Project object */;
+}

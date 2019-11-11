@@ -1,0 +1,6 @@
+framework module Pods_LeapMotionClient {
+  umbrella header "Pods-LeapMotionClient-umbrella.h"
+
+  export *
+  module * { export * }
+}
