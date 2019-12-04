@@ -19,6 +19,9 @@ disabled_rules:
 - explicit_top_level_acl # クラスのアクセス修飾子は不要
 - unused_optional_binding # SceneDelegateで使われているため
 - discouraged_optional_collection # 標準APIで使用されているため
+- private_outlet # CellなどでもIBOutletを利用したいため
+- prohibited_interface_builder # IBOutletを利用したいため
+- strong_iboutlet # weakをつけるため
 
 # defaultルール以外にopt-inから採用するルール
 opt_in_rules:
