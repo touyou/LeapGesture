@@ -1,16 +1,25 @@
 PODS:
-  - SwiftLint (0.37.0)
+  - AudioKit (4.9.3):
+    - AudioKit/Core (= 4.9.3)
+    - AudioKit/UI (= 4.9.3)
+  - AudioKit/Core (4.9.3)
+  - AudioKit/UI (4.9.3):
+    - AudioKit/Core
+  - SwiftLint (0.38.0)
 
 DEPENDENCIES:
+  - AudioKit
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - AudioKit
     - SwiftLint
 
 SPEC CHECKSUMS:
-  SwiftLint: c078a14d7d7ade75e5507795d185e3da41d844d2
+  AudioKit: d025ecbb68f567bba15dab7ea80b8991155729f9
+  SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
 
-PODFILE CHECKSUM: a50c91bc89ea4e0a9f615a8cc2b5960d3e83e378
+PODFILE CHECKSUM: c1d53aa7276adf831256e462696f61b16c631dd3
 
 COCOAPODS: 1.8.4

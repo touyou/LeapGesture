@@ -29,6 +29,10 @@ class TestConnectionViewController: UIViewController {
             print(CodeConverter.convert(from: value))
         }
     }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
 }
 
 extension TestConnectionViewController: StoryboardInstantiable {}

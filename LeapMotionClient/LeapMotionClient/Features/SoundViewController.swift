@@ -1,0 +1,109 @@
+//
+//  SoundViewController.swift
+//  LeapMotionClient
+//
+//  Created by 藤井陽介 on 2019/12/20.
+//  Copyright © 2019 touyou. All rights reserved.
+//
+
+import UIKit
+// ignore: sorted_imports
+import AudioKit
+import Combine
+
+class SoundViewController: UIViewController {
+    @IBOutlet weak var soundLabel: UILabel!
+
+    private var receiver: AnyCancellable?
+    let client = UdpClient()
+    let audioBox = AudioUtility()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        client.startConnection()
+        audioBox.start()
+
+        receiver = client.$receivedMessage.sink { [weak self] value in
+            guard let self = self else { return }
+            let fingers = CodeConverter.convert(from: value)
+            self.audioBox.play(for: fingers)
+            DispatchQueue.main.async {
+                self.soundLabel.text = self.audioBox.string(fingers)
+            }
+        }
+    }
+}
+
+extension SoundViewController {
+    class AudioUtility {
+        var oscillators = [AKOscillator]()
+        var mixer: AKMixer?
+
+        let frequencies = [
+            523.251, 587.330, 659.255, 698.456,
+            783.991, 880.000, 987.767, 1_046.502
+        ]
+
+        init() {
+            for idx in 0..<8 {
+                let oscillator = AKOscillator()
+                oscillator.frequency = frequencies[idx]
+                oscillator.amplitude = 0.5
+                oscillators.append(oscillator)
+            }
+            mixer = AKMixer(oscillators)
+        }
+
+        func start() {
+            AudioKit.output = mixer
+            do {
+                try AudioKit.start()
+            } catch {
+                print("cannot initialize audiokit")
+            }
+        }
+
+        func play(for fingers: [CodeConverter.Finger]) {
+            for finger in fingers {
+                let idx = convertToIndex(of: finger)
+                oscillators[idx].start()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
+                    self.oscillators[idx].stop()
+                }
+            }
+        }
+
+        func string(_ fingers: [CodeConverter.Finger]) -> String {
+            let sounds = ["ド", "レ", "ミ", "ファ", "ソ", "ラ", "シ", "Hiド"]
+            var soundName = ""
+            for finger in fingers {
+                soundName += sounds[convertToIndex(of: finger)]
+            }
+            return soundName
+        }
+
+        private func convertToIndex(of finger: CodeConverter.Finger) -> Int {
+            switch finger {
+            case .leftPinky:
+                return 0
+            case .leftRing:
+                return 1
+            case .leftMiddle:
+                return 2
+            case .leftIndex:
+                return 3
+            case .rightIndex:
+                return 4
+            case .rightMiddle:
+                return 5
+            case .rightRing:
+                return 6
+            case .rightPinky:
+                return 7
+            }
+        }
+    }
+}
+
+extension SoundViewController: StoryboardInstantiable {}

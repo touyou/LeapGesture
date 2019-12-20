@@ -7,6 +7,7 @@ target 'LeapMotionClient' do
 
   # Pods for LeapMotionClient
   pod 'SwiftLint'
+  pod 'AudioKit'
 
   target 'LeapMotionClientTests' do
     inherit! :search_paths

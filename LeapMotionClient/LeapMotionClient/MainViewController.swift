@@ -20,7 +20,10 @@ class MainViewController: UIViewController {
         }
     }
     
-    private var features = [Feature(name: "接続テスト", featureController: TestConnectionViewController())]
+    private var features = [
+        Feature(name: "接続テスト", featureController: TestConnectionViewController()),
+        Feature(name: "楽器", featureController: SoundViewController())
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +44,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? FeatureListTableViewCell
-        cell?.nameLabel.text = "Ex.\(indexPath.row)" + features[indexPath.row].name
+        cell?.nameLabel.text = "Ex.\(indexPath.row) " + features[indexPath.row].name
         return cell ?? UITableViewCell()
     }
 }
