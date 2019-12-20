@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4630FEF823AC738A0040FBD7 /* CodeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630FEF723AC738A0040FBD7 /* CodeConverter.swift */; };
 		464141702397840000CFC3F8 /* FeatureListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641416E2397840000CFC3F8 /* FeatureListTableViewCell.swift */; };
 		464141712397840000CFC3F8 /* FeatureListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4641416F2397840000CFC3F8 /* FeatureListTableViewCell.xib */; };
 		464141742397858600CFC3F8 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464141732397858600CFC3F8 /* Feature.swift */; };
 		46414176239785ED00CFC3F8 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46414175239785ED00CFC3F8 /* StoryboardInstantiable.swift */; };
 		4641417823978EBC00CFC3F8 /* UdpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641417723978EBC00CFC3F8 /* UdpClient.swift */; };
+		46DFB4AE23A1D7130099221A /* TestConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DFB4AD23A1D7130099221A /* TestConnectionViewController.swift */; };
+		46DFB4B023A1D7200099221A /* TestConnectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46DFB4AF23A1D7200099221A /* TestConnectionViewController.storyboard */; };
 		46FE0CD92378F4700086BDD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE0CD82378F4700086BDD0 /* AppDelegate.swift */; };
 		46FE0CDB2378F4700086BDD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE0CDA2378F4700086BDD0 /* SceneDelegate.swift */; };
 		46FE0CDD2378F4700086BDD0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE0CDC2378F4700086BDD0 /* MainViewController.swift */; };
@@ -38,11 +41,14 @@
 		07AD3A9C82F365F0AD0CC009 /* Pods-LeapMotionClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeapMotionClientTests.debug.xcconfig"; path = "Target Support Files/Pods-LeapMotionClientTests/Pods-LeapMotionClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2AEB6D385FC48F2ADD674E9A /* Pods-LeapMotionClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeapMotionClient.debug.xcconfig"; path = "Target Support Files/Pods-LeapMotionClient/Pods-LeapMotionClient.debug.xcconfig"; sourceTree = "<group>"; };
 		41421DA37A4A1F624D3B57D7 /* Pods_LeapMotionClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeapMotionClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4630FEF723AC738A0040FBD7 /* CodeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeConverter.swift; sourceTree = "<group>"; };
 		4641416E2397840000CFC3F8 /* FeatureListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureListTableViewCell.swift; sourceTree = "<group>"; };
 		4641416F2397840000CFC3F8 /* FeatureListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureListTableViewCell.xib; sourceTree = "<group>"; };
 		464141732397858600CFC3F8 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		46414175239785ED00CFC3F8 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		4641417723978EBC00CFC3F8 /* UdpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UdpClient.swift; path = /Users/touyou/Projects/Study/LeapGesture/LeapMotionClient/LeapMotionClient/Commons/UdpClient.swift; sourceTree = "<absolute>"; };
+		46DFB4AD23A1D7130099221A /* TestConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConnectionViewController.swift; sourceTree = "<group>"; };
+		46DFB4AF23A1D7200099221A /* TestConnectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestConnectionViewController.storyboard; sourceTree = "<group>"; };
 		46FE0CD52378F4700086BDD0 /* LeapMotionClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeapMotionClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FE0CD82378F4700086BDD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46FE0CDA2378F4700086BDD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,8 @@
 		4641416D239783D300CFC3F8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				46DFB4AD23A1D7130099221A /* TestConnectionViewController.swift */,
+				46DFB4AF23A1D7200099221A /* TestConnectionViewController.storyboard */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 				4641417723978EBC00CFC3F8 /* UdpClient.swift */,
 				464141732397858600CFC3F8 /* Feature.swift */,
 				46414175239785ED00CFC3F8 /* StoryboardInstantiable.swift */,
+				4630FEF723AC738A0040FBD7 /* CodeConverter.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 			files = (
 				464141712397840000CFC3F8 /* FeatureListTableViewCell.xib in Resources */,
 				46FE0CE52378F4730086BDD0 /* LaunchScreen.storyboard in Resources */,
+				46DFB4B023A1D7200099221A /* TestConnectionViewController.storyboard in Resources */,
 				46FE0CE22378F4730086BDD0 /* Assets.xcassets in Resources */,
 				46FE0CE02378F4700086BDD0 /* Main.storyboard in Resources */,
 			);
@@ -368,8 +378,10 @@
 			files = (
 				464141702397840000CFC3F8 /* FeatureListTableViewCell.swift in Sources */,
 				46FE0CDD2378F4700086BDD0 /* MainViewController.swift in Sources */,
+				4630FEF823AC738A0040FBD7 /* CodeConverter.swift in Sources */,
 				464141742397858600CFC3F8 /* Feature.swift in Sources */,
 				4641417823978EBC00CFC3F8 /* UdpClient.swift in Sources */,
+				46DFB4AE23A1D7130099221A /* TestConnectionViewController.swift in Sources */,
 				46FE0CD92378F4700086BDD0 /* AppDelegate.swift in Sources */,
 				46414176239785ED00CFC3F8 /* StoryboardInstantiable.swift in Sources */,
 				46FE0CDB2378F4700086BDD0 /* SceneDelegate.swift in Sources */,

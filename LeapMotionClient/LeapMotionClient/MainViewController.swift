@@ -16,13 +16,15 @@ class MainViewController: UIViewController {
             featureListTableView.register(UINib(nibName: String(describing: FeatureListTableViewCell.self), bundle: nil), forCellReuseIdentifier: reuseIdentifier)
             featureListTableView.dataSource = self
             featureListTableView.delegate = self
+            featureListTableView.tableFooterView = UIView()
         }
     }
     
-    private var features = [Feature]()
+    private var features = [Feature(name: "接続テスト", featureController: TestConnectionViewController())]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
@@ -39,7 +41,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? FeatureListTableViewCell
-        cell?.nameLabel.text = features[indexPath.row].name
+        cell?.nameLabel.text = "Ex.\(indexPath.row)" + features[indexPath.row].name
         return cell ?? UITableViewCell()
     }
 }

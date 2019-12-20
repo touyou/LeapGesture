@@ -12,30 +12,36 @@ import Network
 // ref: https://qiita.com/shu223/items/a6bcc454232e96c107ec
 
 class UdpClient: NSObject {
-    private let networkType = "_networkplayground._udp."
-    private let networkDomain = "local"
-    private let netServiceBrowser = NetServiceBrowser()
-    
-    var receivedMessage = PassthroughSubject<String, Never>()
+    @Published var receivedMessage: String = ""
     
     func startConnection() {
-        netServiceBrowser.delegate = self
-        netServiceBrowser.searchForServices(ofType: networkType, inDomain: networkDomain)
+        startListener(name: "LeapMotion")
     }
     
     private func startListener(name: String) {
-        let udpParams = NWParameters.udp
-        guard let listener = try? NWListener(using: udpParams) else {
+        guard let listener = try? NWListener(using: .udp, on: 1_234) else {
             fatalError()
         }
         
-        listener.service = NWListener.Service(name: name, type: networkType)
-        
         let listenerQueue = DispatchQueue(label: "dev.touyou.LeapMotionClient.listener")
-        
+
         listener.newConnectionHandler = { [unowned self] connection in
+            print("connected")
             connection.start(queue: listenerQueue)
             self.receive(on: connection)
+        }
+
+        listener.stateUpdateHandler = { state in
+            switch state {
+            case .ready:
+                print("ready")
+                let connection = NWConnection(host: "192.168.111.255", port: 5_432, using: .udp)
+                connection.start(queue: listenerQueue)
+                self.receive(on: connection)
+            // ignore: vertical_whitespace_between_cases
+            default:
+                break
+            }
         }
         
         listener.start(queue: listenerQueue)
@@ -44,7 +50,8 @@ class UdpClient: NSObject {
     private func receive(on connection: NWConnection) {
         connection.receiveMessage { data, _, _, error in
             if let data = data, let message = String(data: data, encoding: .utf8) {
-                self.receivedMessage.send(message)
+                print(message)
+                self.receivedMessage = message
             }
             if let error = error {
                 print(error)
@@ -52,11 +59,5 @@ class UdpClient: NSObject {
                 self.receive(on: connection)
             }
         }
-    }
-}
-
-extension UdpClient: NetServiceBrowserDelegate {
-    func netServiceBrowser(_ browser: NetServiceBrowser, didFind service: NetService, moreComing: Bool) {
-        startListener(name: service.name)
     }
 }

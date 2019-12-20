@@ -2,10 +2,11 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using UnityEngine;
 
 public class UdpServer {
   private UdpClient udpForSend;
-  private string remoteHost = "localhost";
+  private string remoteHost = "192.168.111.105";
   private int remotePort;
 
   public UdpServer() { }
@@ -24,6 +25,7 @@ public class UdpServer {
     try {
       byte[] sendBytes = Encoding.UTF8.GetBytes(sendMsg);
       udpForSend.Send(sendBytes, sendBytes.Length, remoteHost, remotePort);
+      Debug.Log(sendBytes);
     } catch { }
   }
 

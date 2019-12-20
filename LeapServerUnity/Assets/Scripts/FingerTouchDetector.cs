@@ -20,10 +20,21 @@ public class FingerTouchDetector : MonoBehaviour {
     rightFingers = new Finger[5];
     server = new UdpServer();
     server.init(5432, 1234);
+    StartCoroutine(loop());
   }
 
   // Update is called once per frame
   void Update() {
+  }
+
+  private IEnumerator loop() {
+    while (true) {
+      yield return new WaitForSeconds(1f);
+      UpdateData();
+    }
+  }
+
+  private void UpdateData() {
     Frame frame = controller.Frame();
     foreach (Hand hand in frame.Hands) {
       if (hand.IsRight) {
