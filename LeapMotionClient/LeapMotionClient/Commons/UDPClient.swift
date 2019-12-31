@@ -11,7 +11,7 @@ import Network
 
 // ref: https://qiita.com/shu223/items/a6bcc454232e96c107ec
 
-class UdpClient: NSObject {
+class UDPClient: NSObject {
     @Published var receivedMessage: String = ""
     
     func startConnection() {
@@ -38,7 +38,7 @@ class UdpClient: NSObject {
                 let connection = NWConnection(host: "192.168.111.255", port: 5_432, using: .udp)
                 connection.start(queue: listenerQueue)
                 self.receive(on: connection)
-            // ignore: vertical_whitespace_between_cases
+
             default:
                 break
             }

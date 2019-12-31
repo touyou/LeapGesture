@@ -14,7 +14,7 @@ class TestConnectionViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
 
     private var receiver: AnyCancellable?
-    let client = UdpClient()
+    let client = UDPClient()
 
     override func viewDidLoad() {
         super.viewDidLoad()

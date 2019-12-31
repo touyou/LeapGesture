@@ -17,7 +17,7 @@ class SoundViewController: UIViewController {
     
     private var receiver: AnyCancellable?
     var duration: Double = 2.0
-    let client = UdpClient()
+    let client = UDPClient()
     let audioBox = AudioUtility()
     
     override func viewDidLoad() {

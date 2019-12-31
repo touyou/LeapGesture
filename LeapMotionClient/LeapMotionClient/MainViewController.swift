@@ -22,7 +22,8 @@ class MainViewController: UIViewController {
     
     private var features = [
         Feature(name: "接続テスト", featureController: TestConnectionViewController()),
-        Feature(name: "楽器", featureController: SoundViewController())
+        Feature(name: "楽器", featureController: SoundViewController()),
+        Feature(name: "計算機", featureController: BinaryViewController()),
     ]
     
     override func viewDidLoad() {
