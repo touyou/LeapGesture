@@ -13,8 +13,10 @@ import Combine
 
 class SoundViewController: UIViewController {
     @IBOutlet weak var soundLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
 
     private var receiver: AnyCancellable?
+    var duration: Double = 2.0
     let client = UdpClient()
     let audioBox = AudioUtility()
 
@@ -27,11 +29,16 @@ class SoundViewController: UIViewController {
         receiver = client.$receivedMessage.sink { [weak self] value in
             guard let self = self else { return }
             let fingers = CodeConverter.convert(from: value)
-            self.audioBox.play(for: fingers)
+            self.audioBox.play(for: fingers, duration: self.duration)
             DispatchQueue.main.async {
                 self.soundLabel.text = self.audioBox.string(fingers)
             }
         }
+    }
+
+    @IBAction private func changedDurationSlider(_ sender: UISlider) {
+        durationLabel.text = String(format: "Duration: %.1f", duration)
+        duration = Double(sender.value)
     }
 }
 
@@ -64,11 +71,11 @@ extension SoundViewController {
             }
         }
 
-        func play(for fingers: [CodeConverter.Finger]) {
+        func play(for fingers: [CodeConverter.Finger], duration: Double = 2.0) {
             for finger in fingers {
                 let idx = convertToIndex(of: finger)
                 oscillators[idx].start()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration) { [unowned self] in
                     self.oscillators[idx].stop()
                 }
             }

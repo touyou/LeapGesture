@@ -21,15 +21,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Hv-EV-2VJ">
+                                <rect key="frame" x="18" y="712" width="378" height="31"/>
+                                <connections>
+                                    <action selector="changedDurationSlider:" destination="dLi-zN-0sN" eventType="valueChanged" id="UIw-Lm-lHq"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration: 2.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cza-zZ-5tb">
+                                <rect key="frame" x="157.5" y="667" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="F3g-nW-XaW" firstAttribute="centerY" secondItem="3hl-yB-HVu" secondAttribute="centerY" id="B80-Ej-GiB"/>
+                            <constraint firstItem="h1y-g6-rwo" firstAttribute="bottom" secondItem="9Hv-EV-2VJ" secondAttribute="bottom" constant="120" id="S6l-c2-gfI"/>
+                            <constraint firstItem="9Hv-EV-2VJ" firstAttribute="leading" secondItem="h1y-g6-rwo" secondAttribute="leading" constant="20" id="XZo-Hl-eFu"/>
+                            <constraint firstItem="cza-zZ-5tb" firstAttribute="centerX" secondItem="3hl-yB-HVu" secondAttribute="centerX" id="adB-Ol-fyF"/>
+                            <constraint firstItem="h1y-g6-rwo" firstAttribute="trailing" secondItem="9Hv-EV-2VJ" secondAttribute="trailing" constant="20" id="fBX-te-hUF"/>
+                            <constraint firstItem="9Hv-EV-2VJ" firstAttribute="top" secondItem="cza-zZ-5tb" secondAttribute="bottom" constant="24" id="kna-aF-ees"/>
                             <constraint firstItem="F3g-nW-XaW" firstAttribute="centerX" secondItem="3hl-yB-HVu" secondAttribute="centerX" id="u83-po-v3H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h1y-g6-rwo"/>
                     </view>
                     <connections>
+                        <outlet property="durationLabel" destination="cza-zZ-5tb" id="QhK-Qj-3gb"/>
                         <outlet property="soundLabel" destination="F3g-nW-XaW" id="Hfr-A8-BH5"/>
                     </connections>
                 </viewController>
