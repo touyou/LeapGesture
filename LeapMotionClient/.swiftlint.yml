@@ -22,6 +22,8 @@ disabled_rules:
 - private_outlet # CellなどでもIBOutletを利用したいため
 - prohibited_interface_builder # IBOutletを利用したいため
 - strong_iboutlet # weakをつけるため
+- vertical_whitespace_between_cases # 長いswitch文を利用していないため
+- convenience_type # ネームスペースの整理のため
 
 # defaultルール以外にopt-inから採用するルール
 opt_in_rules:

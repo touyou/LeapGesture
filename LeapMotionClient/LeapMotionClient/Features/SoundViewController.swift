@@ -14,18 +14,18 @@ import Combine
 class SoundViewController: UIViewController {
     @IBOutlet weak var soundLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
-
+    
     private var receiver: AnyCancellable?
     var duration: Double = 2.0
     let client = UdpClient()
     let audioBox = AudioUtility()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         client.startConnection()
         audioBox.start()
-
+        
         receiver = client.$receivedMessage.sink { [weak self] value in
             guard let self = self else { return }
             let fingers = CodeConverter.convert(from: value)
@@ -35,7 +35,7 @@ class SoundViewController: UIViewController {
             }
         }
     }
-
+    
     @IBAction private func changedDurationSlider(_ sender: UISlider) {
         durationLabel.text = String(format: "Duration: %.1f", duration)
         duration = Double(sender.value)
@@ -46,12 +46,12 @@ extension SoundViewController {
     class AudioUtility {
         var oscillators = [AKOscillator]()
         var mixer: AKMixer?
-
+        
         let frequencies = [
             523.251, 587.330, 659.255, 698.456,
             783.991, 880.000, 987.767, 1_046.502
         ]
-
+        
         init() {
             for idx in 0..<8 {
                 let oscillator = AKOscillator()
@@ -61,7 +61,7 @@ extension SoundViewController {
             }
             mixer = AKMixer(oscillators)
         }
-
+        
         func start() {
             AudioKit.output = mixer
             do {
@@ -70,7 +70,7 @@ extension SoundViewController {
                 print("cannot initialize audiokit")
             }
         }
-
+        
         func play(for fingers: [CodeConverter.Finger], duration: Double = 2.0) {
             for finger in fingers {
                 let idx = convertToIndex(of: finger)
@@ -80,7 +80,7 @@ extension SoundViewController {
                 }
             }
         }
-
+        
         func string(_ fingers: [CodeConverter.Finger]) -> String {
             let sounds = ["ド", "レ", "ミ", "ファ", "ソ", "ラ", "シ", "Hiド"]
             var soundName = ""
@@ -89,7 +89,7 @@ extension SoundViewController {
             }
             return soundName
         }
-
+        
         private func convertToIndex(of finger: CodeConverter.Finger) -> Int {
             switch finger {
             case .leftPinky:

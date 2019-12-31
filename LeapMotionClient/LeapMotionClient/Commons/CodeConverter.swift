@@ -8,7 +8,6 @@
 
 import Foundation
 
-// ignore: convenience_type
 class CodeConverter {
     enum Finger: Int {
         case leftPinky = 3
