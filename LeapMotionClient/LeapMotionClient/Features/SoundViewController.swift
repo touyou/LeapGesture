@@ -81,10 +81,8 @@ extension SoundViewController {
             for finger in fingers {
                 let idx = convertToIndex(of: finger)
                 oscillators[idx].start()
-                DispatchQueue.main.asyncAfter(deadline: .now() + duration) { [unowned self] in
-                    if self.oscillators[idx].isStopped {
-                        return
-                    }
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration) { [weak self] in
+                    guard let self = self else { return }
                     self.oscillators[idx].stop()
                 }
             }
