@@ -17,13 +17,12 @@ class SoundViewController: UIViewController {
     
     private var receiver: AnyCancellable?
     var duration: Double = 2.0
-    let client = UDPClient()
+    var client: UDPClient!
     let audioBox = AudioUtility()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        client.startConnection()
+
         audioBox.start()
         
         receiver = client.$receivedMessage.sink { [weak self] value in
@@ -34,6 +33,13 @@ class SoundViewController: UIViewController {
                 self.soundLabel.text = self.audioBox.string(fingers)
             }
         }
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        receiver?.cancel()
+        audioBox.stopAll()
+
+        super.viewDidDisappear(animated)
     }
     
     @IBAction private func changedDurationSlider(_ sender: UISlider) {
@@ -76,8 +82,17 @@ extension SoundViewController {
                 let idx = convertToIndex(of: finger)
                 oscillators[idx].start()
                 DispatchQueue.main.asyncAfter(deadline: .now() + duration) { [unowned self] in
+                    if self.oscillators[idx].isStopped {
+                        return
+                    }
                     self.oscillators[idx].stop()
                 }
+            }
+        }
+
+        func stopAll() {
+            for oscillator in oscillators {
+                oscillator.stop()
             }
         }
         

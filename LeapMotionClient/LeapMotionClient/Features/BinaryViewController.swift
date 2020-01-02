@@ -14,12 +14,10 @@ class BinaryViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
 
     private var receiver: AnyCancellable?
-    let client = UDPClient()
+    var client: UDPClient!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        client.startConnection()
 
         receiver = client.$receivedMessage.sink { [weak self] value in
             guard let self = self else { return }
@@ -31,8 +29,14 @@ class BinaryViewController: UIViewController {
         }
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        receiver?.cancel()
+    }
+
     func convertFingers(_ fingers: [CodeConverter.Finger]) -> [Int] {
-        var result = Array<Int>(repeating: 0, count: 2)
+        var result = [Int](repeating: 0, count: 2)
         for finger in fingers {
             let value = finger.rawValue
             if value < 4 {

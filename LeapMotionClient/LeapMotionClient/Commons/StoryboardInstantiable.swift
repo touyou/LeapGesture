@@ -10,6 +10,7 @@ import UIKit
 
 protocol StoryboardInstantiable {
     static var storyboardName: String { get }
+    var client: UDPClient! { get set }
 }
 
 extension StoryboardInstantiable where Self: UIViewController {

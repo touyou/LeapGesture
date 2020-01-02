@@ -24,11 +24,14 @@ class MainViewController: UIViewController {
         Feature(name: "接続テスト", featureController: TestConnectionViewController()),
         Feature(name: "楽器", featureController: SoundViewController()),
         Feature(name: "計算機", featureController: BinaryViewController()),
+        Feature(name: "モールス信号", featureController: MorseViewController())
     ]
+    private let client = UDPClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
+        client.startConnection()
     }
 }
 
@@ -52,7 +55,8 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = features[indexPath.row].featureController.instantiate()
+        var controller = features[indexPath.row].featureController.instantiate()
+        controller.client = client
         present(controller, animated: true, completion: nil)
     }
 }

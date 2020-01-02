@@ -24,6 +24,7 @@ disabled_rules:
 - strong_iboutlet # weakをつけるため
 - vertical_whitespace_between_cases # 長いswitch文を利用していないため
 - convenience_type # ネームスペースの整理のため
+- implicitly_unwrapped_optional # クライアントの受け渡し使いたいため
 
 # defaultルール以外にopt-inから採用するルール
 opt_in_rules:

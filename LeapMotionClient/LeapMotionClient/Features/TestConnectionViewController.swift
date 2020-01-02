@@ -14,12 +14,10 @@ class TestConnectionViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
 
     private var receiver: AnyCancellable?
-    let client = UDPClient()
+    var client: UDPClient!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        client.startConnection()
 
         receiver = client.$receivedMessage.sink { [weak self] value in
             guard let self = self else { return }
@@ -32,6 +30,8 @@ class TestConnectionViewController: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+
+        receiver?.cancel()
     }
 }
 
