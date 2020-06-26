@@ -35,7 +35,7 @@ class UDPClient: NSObject {
             switch state {
             case .ready:
                 print("ready")
-                let connection = NWConnection(host: "192.168.111.255", port: 5_432, using: .udp)
+                let connection = NWConnection(host: "10.209.15.255", port: 5_432, using: .udp)
                 connection.start(queue: listenerQueue)
                 self.receive(on: connection)
 

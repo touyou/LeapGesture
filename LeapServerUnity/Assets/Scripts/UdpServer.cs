@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class UdpServer {
   private UdpClient udpForSend;
-  private string remoteHost = "192.168.111.105";
+  private string remoteHost = "10.209.15.15";
   private int remotePort;
 
   public UdpServer() { }
